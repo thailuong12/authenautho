@@ -1,0 +1,9 @@
+<h1>Videos</h1>
+<% @videos.each do |video| %>
+    <div>
+        <%= image_tag  ( "#{video.image_url}" ) %> <br>
+        Title: <%= video.title %><br>
+        Description: <%= video.description %> <br>
+        Link: <%= link_to(nil, video.video_url, :target => "_blank") %>
+    </div>
+<% end %>
